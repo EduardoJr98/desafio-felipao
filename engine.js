@@ -34,5 +34,10 @@ function calcularNivelHeroi() {
         nivel = "Radiante";
     }
 
-    alert(mensagem + nomeHeroi + mensagem2 + nivel + ".");
+    const resultadoDiv = document.getElementById("resultado");
+    resultadoDiv.innerHTML = `${mensagem}${nomeHeroi}${mensagem2}${nivel}.`;
+    resultadoDiv.style.fontSize = '1.5em';
+    resultadoDiv.style.color = '#6b4226';
+    resultadoDiv.style.marginTop = '20px';
+    resultadoDiv.style.fontWeight = 'bold';
 }
