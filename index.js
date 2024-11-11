@@ -1,9 +1,19 @@
-let nomeHeroi = "Thor";
-let xpHeroi = 4500;
+let nomeHeroi = prompt("Digite o nome do herói:");
+let xpHeroi;
+while (true) {
+  xpHeroi = parseInt(prompt("Digite o XP do herói:"), 10);
+  
+    if (Number.isInteger(xpHeroi) && xpHeroi >= 0) {
+    break;
+  } else {
+    alert("Por favor, insira um número natural válido para o XP.");
+  }
+}
+
 const mensagem = "O Herói de nome ";
 const mensagem2 = " está no nível de ";
 
-let nivel = "";
+let nivel = ""; 
 
 if (xpHeroi <= 1000) {
     nivel = "Ferro";
@@ -23,4 +33,4 @@ if (xpHeroi <= 1000) {
     nivel = "Radiante";
 }
 
-console.log(mensagem + nomeHeroi + mensagem2 + nivel + ".");
+alert(mensagem + nomeHeroi + mensagem2 + nivel + ".");
